@@ -1,0 +1,325 @@
+Copying skeleton files.
+These files are for the users to personalise their cygwin experience.
+
+They will never be overwritten nor automatically updated.
+
+'./.bashrc' -> '/home/eaf260//.bashrc'
+/usr/bin/install: setting permissions for '/home/eaf260//.bashrc': Invalid argument
+'./.inputrc' -> '/home/eaf260//.inputrc'
+/usr/bin/install: setting permissions for '/home/eaf260//.inputrc': Invalid argument
+'./.bash_profile' -> '/home/eaf260//.bash_profile'
+/usr/bin/install: setting permissions for '/home/eaf260//.bash_profile': Invalid argument
+'./.profile' -> '/home/eaf260//.profile'
+/usr/bin/install: setting permissions for '/home/eaf260//.profile': Invalid argument
+
+UREGINA+eaf260@ED435-ST06 ~
+$ pwd
+/home/eaf260
+
+UREGINA+eaf260@ED435-ST06 ~
+$ mkdir test
+
+UREGINA+eaf260@ED435-ST06 ~
+$ cd test
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git init
+Initialized empty Git repository in C:/cygwin64/home/eaf260/test/.git/
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git config --global user.name "Emily"
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git config --global user.email "emilya.frostad@gmail.com"
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ ls
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ ls-
+bash: ls-: command not found
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ -ls
+bash: -ls: command not found
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git add README.txt
+fatal: pathspec 'README.txt' did not match any files
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ ls
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ ls -la
+total 0
+drwxrwxr-x+ 1 UREGINA+eaf260 UREGINA+eaf260 0 Oct 28 09:54 .
+drwxrwxr-x+ 1 UREGINA+eaf260 UREGINA+eaf260 0 Oct 28 09:55 ..
+drwxrwxr-x+ 1 UREGINA+eaf260 UREGINA+eaf260 0 Oct 28 09:57 .git
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ cd test
+bash: cd: test: No such file or directory
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ ls
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ pwd
+/home/eaf260/test
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ ls -la
+total 0
+drwxrwxr-x+ 1 UREGINA+eaf260 UREGINA+eaf260 0 Oct 28 09:54 .
+drwxrwxr-x+ 1 UREGINA+eaf260 UREGINA+eaf260 0 Oct 28 09:55 ..
+drwxrwxr-x+ 1 UREGINA+eaf260 UREGINA+eaf260 0 Oct 28 09:57 .git
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ touch README.txt
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ cat README.txt
+test
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git add README.txt
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git commit -m "initializing"
+[master (root-commit) 0c8352b] initializing
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.txt
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git commit -m "add new test"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ status
+bash: status: command not found
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git commit -am "added another line of code"
+[master 7e02e50] added another line of code
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git log
+commit 7e02e5032d998533c171a8beb563d0659ff78272 (HEAD -> master)
+Author: Emily <emilya.frostad@gmail.com>
+Date:   Tue Oct 28 17:04:04 2025 +0100
+
+    added another line of code
+
+commit 0c8352bce01a0585f3dd41a583fd2d936b634824
+Author: Emily <emilya.frostad@gmail.com>
+Date:   Tue Oct 28 17:01:31 2025 +0100
+
+    initializing
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git diff
+diff --git a/README.txt b/README.txt
+index 39bd688..3ceaab5 100644
+--- a/README.txt
++++ b/README.txt
+@@ -1,2 +1,3 @@
+ test
+-test2
+\ No newline at end of file
++test2
++test3
+\ No newline at end of file
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git commit -am "added third line of code"
+[master ce72d6f] added third line of code
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git remote add origin https://github.com/emilyfrostad/my-project.git
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git branch -M main
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 32 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (9/9), 678 bytes | 169.00 KiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/emilyfrostad/my-project.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ cd ..
+
+UREGINA+eaf260@ED435-ST06 ~
+$ mkdir cloneOfLab
+
+UREGINA+eaf260@ED435-ST06 ~
+$ cd cloneOfLab/
+
+UREGINA+eaf260@ED435-ST06 ~/cloneOfLab
+$ git clone https://github.com/emilyfrostad/my-project.git
+Cloning into 'my-project'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 9 (delta 0), reused 9 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (9/9), done.
+
+UREGINA+eaf260@ED435-ST06 ~/cloneOfLab
+$ ls
+my-project
+
+UREGINA+eaf260@ED435-ST06 ~/cloneOfLab
+$ cd my-project/
+
+UREGINA+eaf260@ED435-ST06 ~/cloneOfLab/my-project
+$ ls
+README.txt
+
+UREGINA+eaf260@ED435-ST06 ~/cloneOfLab/my-project
+$ cat README.txt
+test
+test2
+test3
+UREGINA+eaf260@ED435-ST06 ~/cloneOfLab/my-project
+$ cd ..
+
+UREGINA+eaf260@ED435-ST06 ~/cloneOfLab
+$ cd test
+bash: cd: test: No such file or directory
+
+UREGINA+eaf260@ED435-ST06 ~/cloneOfLab
+$ ls
+my-project
+
+UREGINA+eaf260@ED435-ST06 ~/cloneOfLab
+$ cd ..
+
+UREGINA+eaf260@ED435-ST06 ~
+$ ls
+cloneOfLab  test
+
+UREGINA+eaf260@ED435-ST06 ~
+$ cd test
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git commit -am "another test"
+[main fb774a1] another test
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 259 bytes | 129.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/emilyfrostad/my-project.git
+   ce72d6f..fb774a1  main -> main
+
+UREGINA+eaf260@ED435-ST06 ~/test
+$ cd ..
+
+UREGINA+eaf260@ED435-ST06 ~
+$ ls
+cloneOfLab  test
+
+UREGINA+eaf260@ED435-ST06 ~
+$ cd cloneOfLab
+
+UREGINA+eaf260@ED435-ST06 ~/cloneOfLab
+$ ls
+my-project
+
+UREGINA+eaf260@ED435-ST06 ~/cloneOfLab
+$ cd my-project/
+
+UREGINA+eaf260@ED435-ST06 ~/cloneOfLab/my-project
+$ cat README.txt
+test
+test2
+test3
+UREGINA+eaf260@ED435-ST06 ~/cloneOfLab/my-project
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 239 bytes | 13.00 KiB/s, done.
+From https://github.com/emilyfrostad/my-project
+   ce72d6f..fb774a1  main       -> origin/main
+Updating ce72d6f..fb774a1
+Fast-forward
+ README.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+UREGINA+eaf260@ED435-ST06 ~/cloneOfLab/my-project
+$ cat README.txt
+test
+test2
+test3
+test4
+UREGINA+eaf260@ED435-ST06 ~/cloneOfLab/my-project
+$
